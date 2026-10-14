@@ -1,0 +1,128 @@
+/* ALVION — October 2026 additions: fonts, mobile action bar, quote form, FAQ, reviews. */
+
+/* Type refinements for Geist / Instrument Serif */
+body{font-family:"Inter Tight",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+h1 em,h2 em,.page-title em,.big-title em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.02em;font-size:1.06em;line-height:.9}
+
+/* ---------- Mobile action bar (Call / Text / Get a Quote / Menu) ---------- */
+@media(max-width:820px){
+ .glass-nav.action-bar{grid-template-columns:minmax(0,.85fr) minmax(0,.85fr) minmax(0,1.9fr) minmax(0,.85fr);align-items:center;gap:4px;height:66px;padding:6px;
+  background:linear-gradient(120deg,rgba(40,45,53,.86),rgba(14,16,20,.9) 55%,rgba(48,52,60,.84));backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%)}
+ .glass-nav.action-bar a,.glass-nav.action-bar button{min-height:52px;font:500 10px/1.1 Michroma,monospace;letter-spacing:.04em;color:#d4d8de}
+ .glass-nav.action-bar .action-quote{flex-direction:row;gap:10px;height:52px;border-radius:30px;background:#ebebea;color:#0a0b0d;font:600 14px/1 "Inter Tight",Arial,sans-serif;letter-spacing:-.01em;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+ .glass-nav.action-bar .action-quote i{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#0a0b0d;color:#ebebea;font-size:13px}
+ .glass-nav.action-bar .action-quote:active{transform:scale(.97)}
+ .glass-nav.action-bar a[aria-current=page]{background:none}
+}
+@media(max-width:360px){.glass-nav.action-bar .action-quote{font-size:12px;gap:6px}.glass-nav.action-bar .action-quote i{width:22px;height:22px}}
+
+/* ---------- Quote form ---------- */
+.quote-form{max-width:980px}
+.quote-form .contact-form{margin-top:2.5rem}
+.reply-choice{border:0;margin:0;padding:0;grid-column:1/-1}
+.reply-choice legend{font:500 .75rem Michroma,monospace;letter-spacing:.12em;margin-bottom:14px;padding:0}
+.reply-options{display:flex;flex-wrap:wrap;gap:10px}
+.reply-options label{position:relative;display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border:1px solid rgba(235,240,250,.25);border-radius:40px;cursor:pointer;font:500 14px "Inter Tight",Arial,sans-serif;transition:background .2s,border-color .2s;min-height:48px}
+.reply-options input{position:absolute;opacity:0;pointer-events:none}
+.reply-options label:has(input:checked){background:#ebebea;color:#0a0b0d;border-color:#ebebea}
+.reply-options label:has(input:focus-visible){outline:2px solid #ebebea;outline-offset:4px}
+.field .req{opacity:.6;font-size:.9em;letter-spacing:0;text-transform:none}
+.photo-drop{grid-column:1/-1;border:1px dashed rgba(235,240,250,.32);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.photo-drop label.photo-button{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:40px;border:1px solid rgba(235,240,250,.4);cursor:pointer;font:500 14px "Inter Tight",Arial,sans-serif;min-height:48px}
+.photo-drop label.photo-button:hover{background:rgba(235,240,250,.08)}
+.photo-drop input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+.photo-drop input[type=file]:focus-visible+label{outline:2px solid #ebebea;outline-offset:4px}
+.photo-drop p{margin:0;font-size:14px;line-height:1.6;opacity:.75}
+.photo-drop .photo-title{font:500 .75rem Michroma,monospace;letter-spacing:.12em;opacity:1}
+.photo-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px}
+.photo-thumbs:empty{display:none}
+.photo-thumbs figure{position:relative;margin:0;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#111214}
+.photo-thumbs img{width:100%;height:100%;object-fit:cover}
+.photo-thumbs button{position:absolute;top:5px;right:5px;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.72);color:#fff;font-size:16px;line-height:1;cursor:pointer}
+.quote-form .submit{border-radius:40px;padding:18px 28px;font:600 15px "Inter Tight",Arial,sans-serif;letter-spacing:0;background:#ebebea;color:#0a0b0d;min-height:54px}
+.quote-form .submit[disabled]{opacity:.6;cursor:progress}
+.form-status.is-error{color:#ffb4a8}
+.form-success{grid-column:1/-1;padding:28px;border:1px solid rgba(235,240,250,.3);border-radius:20px;background:rgba(140,151,170,.06)}
+.form-success h3{font:500 clamp(26px,3vw,38px)/1.1 "Inter Tight",Arial,sans-serif;letter-spacing:-.04em;margin:0 0 12px}
+.form-success p{margin:0 0 10px;line-height:1.6}
+.form-fallback{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
+.form-fallback a{padding:13px 18px;border:1px solid rgba(235,240,250,.35);border-radius:40px;font-size:14px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+@media(max-width:820px){.reply-options label{flex:1 1 auto;justify-content:center;padding:12px 14px}.photo-drop{padding:18px}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:900px;border-top:1px solid rgba(235,240,250,.2)}
+.faq-list details{border-bottom:1px solid rgba(235,240,250,.2)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:500 clamp(18px,2vw,24px)/1.3 "Inter Tight",Arial,sans-serif;letter-spacing:-.02em}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';flex-shrink:0;display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(235,240,250,.4);border-radius:50%;font:400 18px/1 "Inter Tight",Arial,sans-serif;transition:transform .25s}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list .faq-answer{padding:0 0 26px;max-width:70ch;color:#c8cbd0;font-size:17px;line-height:1.7}
+.faq-list .faq-answer p{margin:0 0 12px}
+.faq-list .faq-answer ul{margin:0 0 12px;padding-left:1.2rem}
+.faq-list .faq-answer li{margin-bottom:6px}
+.faq-list .faq-answer a{text-decoration:underline;text-underline-offset:4px}
+.faq-group{margin-top:64px}
+.faq-group:first-of-type{margin-top:0}
+.faq-group>h2{font:500 .8rem Michroma,monospace;letter-spacing:.14em;color:#9aa1ab;margin:0 0 8px}
+.faq-cta{margin-top:64px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.faq-cta p{width:100%;margin:0 0 8px;font-size:17px;color:#c8cbd0}
+.home-faq{padding:80px 2vw 0}
+.home-faq .home-section-heading{margin-bottom:10px}
+.home-faq .faq-list{max-width:none}
+
+/* ---------- Reviews (shown only when reviews.js has entries) ---------- */
+.reviews-section{padding:85px 0 0}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.review-card{margin:0;padding:26px;border:1px solid rgba(235,240,250,.18);border-radius:20px;background:#111214;display:flex;flex-direction:column;gap:16px}
+.review-stars{color:#f3d27a;letter-spacing:3px;font-size:15px}
+.review-card blockquote{margin:0;font-size:16px;line-height:1.65;color:#d8dbe0}
+.review-card figcaption{margin-top:auto;font:.75rem/1.5 Michroma,monospace;letter-spacing:.08em;color:#9aa1ab}
+.reviews-more{margin-top:22px}
+@media(max-width:820px){.reviews-grid{grid-template-columns:1fr}.home-faq{padding:60px 0 0}}
+
+/* Desktop header: keep nav + "Get a Quote" inside the screen with the wider Geist Mono labels */
+.site-header>.header-cta{flex-shrink:0}
+.desktop-nav{gap:clamp(14px,1.6vw,30px);letter-spacing:.1em;white-space:nowrap}
+@media(min-width:821px) and (max-width:1400px){body.redesigned .site-header>.header-cta{display:none}}
+
+/* ---------- Legal links in footer ---------- */
+.legal-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.legal-links a,.legal-links button{font:inherit;letter-spacing:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(235,235,234,.35)}
+.legal-links a:hover,.legal-links button:hover{text-decoration-color:currentColor}
+
+/* ---------- Compact footer on phones ---------- */
+@media(max-width:820px){
+ footer{padding:44px 20px 28px!important}
+ footer .footer-top{gap:20px!important}
+ footer .footer-brand img{width:36px!important}
+ footer .footer-brand b{font-size:11px!important}
+ footer .footer-links{gap:10px 16px!important;font-size:11px!important}
+ footer .footer-contact{margin-top:24px!important;padding-top:20px!important;gap:18px!important}
+ footer .footer-contact>div{gap:6px!important;font-size:15px}
+ footer .footer-contact>div span{font-size:12px;opacity:.75}
+ footer .social-links{gap:8px 16px!important;font-size:11px!important}
+ footer .footer-bottom{margin-top:22px!important;padding-top:16px!important;gap:8px!important;font-size:10px!important;line-height:1.6}
+ footer .footer-bottom>span:nth-child(1){display:none}
+}
+
+/* ---------- Cookie banner ---------- */
+.cookie-banner{position:fixed;z-index:90;left:16px;right:16px;bottom:16px;max-width:560px;margin-left:auto;padding:18px 20px;border:1px solid rgba(235,240,250,.22);border-radius:18px;background:rgba(17,18,20,.97);color:#ebebea;box-shadow:0 12px 40px rgba(0,0,0,.5);display:flex;align-items:center;gap:18px;font:14px/1.55 "Inter Tight",Arial,sans-serif}
+.cookie-banner[hidden]{display:none}
+.cookie-banner p{margin:0;color:#c8cbd0}
+.cookie-banner b{display:block;color:#ebebea;font-weight:600;margin-bottom:2px}
+.cookie-banner a{text-decoration:underline;text-underline-offset:3px}
+.cookie-actions{display:flex;gap:8px;flex-shrink:0}
+.cookie-actions button{min-height:44px;padding:0 18px;border-radius:30px;border:1px solid rgba(235,240,250,.35);background:none;color:#ebebea;font:500 14px "Inter Tight",Arial,sans-serif;cursor:pointer}
+.cookie-actions .cookie-accept{background:#ebebea;color:#0a0b0d;border-color:#ebebea}
+@media(max-width:820px){.cookie-banner{bottom:calc(98px + env(safe-area-inset-bottom,0px));flex-direction:column;align-items:stretch;gap:12px;padding:16px}.cookie-actions button{flex:1}}
+
+/* ---------- Legal pages ---------- */
+.legal-page{max-width:820px}
+.legal-page h2{font:500 clamp(22px,2.4vw,30px)/1.2 "Inter Tight",Arial,sans-serif;letter-spacing:-.03em;margin:48px 0 14px}
+.legal-page h2:first-child{margin-top:0}
+.legal-page p,.legal-page li{font-size:16px;line-height:1.75;color:#c8cbd0}
+.legal-page ul{padding-left:1.2rem}
+.legal-page a{text-decoration:underline;text-underline-offset:4px}
+.legal-page .updated{font:.8rem Michroma,monospace;letter-spacing:.1em;color:#9aa1ab}
+.legal-page .inline-link{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
