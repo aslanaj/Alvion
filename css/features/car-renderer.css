@@ -1,0 +1,15 @@
+/* ALVION — Tesla preview stage: canvas render, 3D tilt and light sweep. */
+.car-stage{position:relative;perspective:1400px;--rx:0deg;--ry:0deg;--sweep:.5}
+.car-tilt{position:relative;transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.car-canvas{display:block;width:100%;height:auto;aspect-ratio:1536/560;opacity:0;transition:opacity .5s}
+.car-stage.is-ready .car-canvas{opacity:1}
+.car-sweep{position:absolute;inset:0;pointer-events:none;opacity:0;mix-blend-mode:screen;
+ background:linear-gradient(102deg,transparent 0%,transparent 38%,rgba(255,255,255,.9) 49%,rgba(255,255,255,.25) 53%,transparent 64%,transparent 100%);
+ background-size:260% 100%;background-position:130% 0;-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.car-sweep.run{animation:car-sweep 1.15s cubic-bezier(.45,.05,.25,1) both}
+@keyframes car-sweep{0%{opacity:var(--sweep);background-position:130% 0}85%{opacity:var(--sweep)}100%{opacity:0;background-position:-30% 0}}
+@media(hover:none){.car-tilt{animation:car-float 7s ease-in-out infinite}}
+@keyframes car-float{0%,100%{transform:rotateY(-1.4deg) translateY(0)}50%{transform:rotateY(1.4deg) translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.car-tilt,.car-sweep.run{animation:none;transition:none}}
+.car-canvas.is-drawn{opacity:1}
+#alvion-configurator .av-car-stage{margin:18px auto 10px;max-width:987px}
