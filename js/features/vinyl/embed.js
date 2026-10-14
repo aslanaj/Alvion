@@ -1,0 +1,1 @@
+(()=>{const frames=[...document.querySelectorAll('.wrap-visualizer-frame')];addEventListener('message',e=>{const frame=frames.find(f=>f.contentWindow===e.source);if(frame&&e.data?.type==='alvion-wrap-height'&&Number.isFinite(e.data.height))frame.style.height=Math.min(5000,Math.max(400,e.data.height))+'px'})})();
