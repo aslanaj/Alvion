@@ -1,0 +1,1 @@
+(()=>{const range=document.getElementById('av-tint-range'),number=document.querySelector('.tint-live-number');if(!range||!number)return;const sync=()=>number.textContent=range.value+'%';range.addEventListener('input',sync);document.querySelectorAll('[data-vlt]').forEach(b=>b.addEventListener('click',()=>requestAnimationFrame(sync)));sync();})();
