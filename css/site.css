@@ -126,3 +126,17 @@ h1 em,h2 em,.page-title em,.big-title em{font-family:'Instrument Serif',Georgia,
 .legal-page a{text-decoration:underline;text-underline-offset:4px}
 .legal-page .updated{font:.8rem Michroma,monospace;letter-spacing:.1em;color:#9aa1ab}
 .legal-page .inline-link{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+
+/* Quote form: email-draft mode (Open email / Send by text) */
+.form-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
+.quote-form .submit-alt{background:transparent;color:#ebebea;border:1px solid rgba(235,240,250,.45)}
+.quote-form .submit-alt:hover{background:rgba(235,240,250,.08)}
+.photo-note{grid-column:1/-1;margin:0;padding:14px 18px;border:1px dashed rgba(235,240,250,.3);border-radius:16px;font-size:15px;line-height:1.6;color:#c8cbd0}
+.photo-note[hidden],[data-mode-only][hidden]{display:none!important}
+.draft-panel{grid-column:1/-1;padding:22px;border:1px solid rgba(235,240,250,.3);border-radius:20px;background:rgba(140,151,170,.06);display:grid;gap:12px}
+.draft-panel h3{font:500 clamp(22px,2.6vw,30px)/1.15 "Inter Tight",Arial,sans-serif;letter-spacing:-.03em;margin:0}
+.draft-panel p{margin:0;line-height:1.6;color:#c8cbd0}
+.draft-panel textarea{width:100%;min-height:150px;background:rgba(0,0,0,.25);color:#ebebea;border:1px solid rgba(235,240,250,.2);border-radius:12px;padding:12px;font:14px/1.5 "Inter Tight",Arial,sans-serif}
+.draft-panel .form-fallback{display:flex;flex-wrap:wrap;gap:10px}
+.draft-panel .form-fallback a,.draft-panel .form-fallback button{padding:12px 18px;border:1px solid rgba(235,240,250,.35);border-radius:40px;font:500 14px "Inter Tight",Arial,sans-serif;background:none;color:inherit;cursor:pointer}
+@media(max-width:820px){.form-actions .submit{flex:1 1 100%}}
