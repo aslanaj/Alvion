@@ -8,7 +8,7 @@
   const MASK = 'assets/tesla-model-3-mask.webp?v=2';
   const W = 1536, H = 560, TOP = 235;          // visible crop of the 1536×1024 photo
   const FINISH = {                             // contrast, highlight start, highlight strength, sweep
-    Gloss: [1.0, 0.80, 0.85, 0.55],
+    Gloss: [1.0, 0.90, 0.30, 0],
     Satin: [0.72, 0.88, 0.35, 0.22],
     Matte: [0.50, 0.95, 0.10, 0]
   };
@@ -62,8 +62,8 @@
     if (shared) return shared;
     const build = ([photo, mask]) => {
       const o = readPixels(photo, TOP), m = readPixels(mask, 0);
-      const n = W * H, lum = new Uint8Array(n);
-      for (let p = 0, i = 0; p < n; p++, i += 4) lum[p] = Math.round(0.2126 * o[i] + 0.7152 * o[i + 1] + 0.0722 * o[i + 2]);
+      const n = W * H, lum = new Float32Array(n);
+      for (let p = 0, i = 0; p < n; p++, i += 4) lum[p] = 0.2126 * o[i] + 0.7152 * o[i + 1] + 0.0722 * o[i + 2];
       // Alpha mask of the body, used by the light-sweep overlay.
       const mc = document.createElement('canvas'); mc.width = W; mc.height = H;
       const mx = mc.getContext('2d'), md = mx.createImageData(W, H);
@@ -113,12 +113,13 @@
       const px = out.data, n = W * H;
       for (let p = 0, i = 0; p < n; p++, i += 4) {
         let r = o[i], g = o[i + 1], b = o[i + 2];
-        const L = lum[p];
+        const L = lum[p], low=Math.floor(L), high=Math.min(255,low+1), blend=L-low;
+
         if (paintBody) {
           const a = m[i] / 255;
-          if (a > 0) { r += (lr[L] - r) * a; g += (lg[L] - g) * a; b += (lb[L] - b) * a; }
+          if (a > 0) { r += ((lr[low]+(lr[high]-lr[low])*blend) - r) * a; g += ((lg[low]+(lg[high]-lg[low])*blend) - g) * a; b += ((lb[low]+(lb[high]-lb[low])*blend) - b) * a; }
           const fa = m[i + 2] / 255 * 0.85;
-          if (fa > 0) { r += (rr[L] - r) * fa; g += (rg[L] - g) * fa; b += (rb[L] - b) * fa; }
+          if (fa > 0) { r += ((rr[low]+(rr[high]-rr[low])*blend) - r) * fa; g += ((rg[low]+(rg[high]-rg[low])*blend) - g) * fa; b += ((rb[low]+(rb[high]-rb[low])*blend) - b) * fa; }
         }
         const ga = m[i + 1] / 255;
         if (ga > 0) { const f = 1 - ga + ga * glassF; r *= f; g *= f; b *= f; }
@@ -132,7 +133,7 @@
       last = key;
     }
     // Subtle 3D tilt that follows the pointer (desktop) and settles back.
-    if (!reduced.matches && opts.tilt !== false) {
+    if (opts.tilt === true && !reduced.matches) {
       const set = (x, y) => { stage.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg'); stage.style.setProperty('--rx', (-y * 4).toFixed(2) + 'deg'); };
       stage.addEventListener('pointermove', e => {
         if (e.pointerType !== 'mouse') return;

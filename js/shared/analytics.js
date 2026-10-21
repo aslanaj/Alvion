@@ -78,6 +78,7 @@
     else if (href.startsWith('sms:')) track('click_text');
     else if (href.startsWith('mailto:')) track('click_email');
     else if (/instagram\.com|tiktok\.com|youtube\.com|google\.com\/maps/.test(href)) track('click_social', { link_url: href });
-    else if (/contact\.html/.test(href)) track('click_quote', { link_url: href });
+    else if (link.matches('[data-track="quote"]')) track('click_quote');
+    else if (/contact\.html/.test(href)) track('click_contact');
   });
 })();

@@ -5,7 +5,7 @@ Alvion.createPpfView = function createPpfView(host, catalog) {
   const root = host.attachShadow({ mode: 'open' });
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = 'css/features/ppf.css?v=clean1';
+  stylesheet.href = 'css/features/ppf.css?v=20261018-revision2';
   root.innerHTML = Alvion.ppfTemplate;
   root.prepend(stylesheet);
 
@@ -50,9 +50,7 @@ Alvion.createPpfView = function createPpfView(host, catalog) {
   function render(state) {
     const selection = catalog.packages[state.packageId];
     const colored = state.packageId === 'color';
-    const lifted = colored
-      ? ['lift', 'color'].includes(state.phase)
-      : state.exploded;
+    const lifted = ['lift', 'color'].includes(state.phase);
     const colorName = catalog.colors[state.colorIndex][0];
     const filmColor = catalog.colors[state.filmColorIndex][1];
 
@@ -64,11 +62,10 @@ Alvion.createPpfView = function createPpfView(host, catalog) {
     });
 
     const toggle = find('explode');
-    toggle.setAttribute('aria-pressed', lifted);
-    toggle.disabled = colored;
-    toggle.lastChild.textContent = colored
-      ? (state.phase === 'idle' ? 'Color film applied' : 'Applying color film…')
-      : 'Exploded film view';
+    toggle.removeAttribute('aria-pressed');
+    toggle.disabled = false;
+    toggle.lastChild.textContent = state.packageId === 'front' ? 'Full Front · lifted film view' : state.phase === 'idle'
+      ? 'Replay film application' : 'Applying film…';
 
     find('colors').hidden = !colored;
     find('color-name').textContent = colorName;
@@ -116,5 +113,16 @@ Alvion.createPpfView = function createPpfView(host, catalog) {
     find('explode').addEventListener('click', actions.toggleExploded);
   }
 
-  return { render, bind };
+  const ready = Promise.all([
+    new Promise(resolve => {
+      const image = new Image();
+      image.onload = image.onerror = resolve;
+      image.src = root.querySelector('svg image').getAttribute('href');
+    }),
+    new Promise(resolve => {
+      if (stylesheet.sheet) resolve();
+      else { stylesheet.addEventListener('load',resolve,{once:true}); stylesheet.addEventListener('error',resolve,{once:true}); }
+    })
+  ]);
+  return { render, bind, ready };
 };

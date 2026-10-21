@@ -1,0 +1,36 @@
+/* Keep the hero immediately visible; motion begins below the fold. */
+.quote-button,.header-cta,.submit,.portfolio-filters button {
+  transition:transform 160ms ease,background-color 180ms ease,border-color 180ms ease;
+}
+.quote-button:active,.header-cta:active,.submit:active,.portfolio-filters button:active{transform:scale(.98)}
+.mobile-menu {
+  transform:translateY(-8px);opacity:0;visibility:hidden;
+  transition:opacity 240ms ease,transform 240ms cubic-bezier(.2,.7,.2,1),visibility 0s 240ms;
+}
+.mobile-menu.open {
+  opacity:1;transform:translateY(0);visibility:visible;
+  transition:opacity 240ms ease,transform 240ms cubic-bezier(.2,.7,.2,1),visibility 0s;
+}
+[data-alvion-ppf],#ppf-studio{min-height:700px}
+.car-tilt{animation:none!important}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+.footer-brand img{width:52px;height:auto;max-height:76px;object-fit:contain;flex:0 0 auto}.brand img{height:auto;object-fit:contain}
+.car-tilt{transform:none!important;will-change:auto}.car-sweep{display:none}
+
+@media(min-width:821px){.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Mobile hero: a portrait backdrop keeps the complete car behind the copy. */
+.hero-picture{display:contents}
+.home-selected .selected-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1100px){.home-selected .selected-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.home-selected .selected-grid a:first-child{grid-column:auto}.home-selected .selected-grid a:first-child img{height:175px}}
+@media(max-width:820px){
+  .home-page .porsche-hero{display:block;position:relative;isolation:isolate;overflow:hidden;min-height:0;height:auto;aspect-ratio:auto;padding:0;background:#101619}
+  .home-page .porsche-hero .clarity-copy{position:relative;z-index:2;width:100%;padding:28px 24px calc(50vw + 12px);background:none}
+  .home-page .porsche-hero .clarity-car{position:absolute;inset:auto 0 0;z-index:0;display:block;width:100%;max-width:100%;height:auto;min-height:0;aspect-ratio:2/3;object-fit:contain;object-position:center bottom;margin:0;filter:none;mask-image:linear-gradient(to bottom,transparent,#000 20%)}
+  .home-page .porsche-hero::after{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,10,15,.44),rgba(5,10,15,.2) 50%,transparent 72%)}
+  .home-page .porsche-hero .hero-image-note{position:absolute;z-index:2;inset:auto 16px 14px;display:block;padding:0;color:#e3e7e8;font-size:10px;line-height:1.5;text-align:right;text-shadow:0 1px 5px #000}
+}

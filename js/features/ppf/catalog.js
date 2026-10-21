@@ -161,8 +161,8 @@ Alvion.ppfCatalog = {
     ]
   ],
   "timing": {
-    "recolor": 2200,
-    "return": 3400,
-    "complete": 6100
+    "recolor": 400,
+    "return": 1200,
+    "complete": 2200
   }
 };

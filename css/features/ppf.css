@@ -9,3 +9,9 @@
 :host{display:block;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#f1f2ef;background:#080a0b} .configurator{padding-top:48px;padding-bottom:32px}button,a{font-family:inherit}.ppf-title{line-height:1.08;letter-spacing:-.045em}footer{font-size:12px}.eyebrow{letter-spacing:.1em}.stage-caption{font-size:10px}.stage-bottom{font-size:12px}.layers>div{font-size:13px}.layers small,.aside-note,.color-note{font-size:11px}li{font-size:12px}@media(max-width:600px){.configurator{padding:30px 14px}.stage-caption{font-size:8px}.stage-bottom{font-size:10px}li{font-size:11px}footer{font-size:11px}}
 
 .packages button small{display:block;font-size:11px;font-weight:400;margin-top:6px;opacity:.65}.quote .ppf-price{font-size:42px;letter-spacing:-.04em;font-variant-numeric:tabular-nums;margin:8px 0 14px}.quote .price-label{font-size:10px;letter-spacing:.08em;color:#a9b5b7}@media(max-width:600px){.packages button small{font-size:10px}.quote .ppf-price{font-size:36px}}
+
+/* Quiet luxury: short, user-triggered film application. */
+.film{transition:transform 300ms cubic-bezier(.2,.7,.2,1),opacity 240ms,fill 240ms}.guide-group{transition:opacity 240ms}.packages button span{opacity:1}.packages button,.view-toggle{min-height:44px}#swatches button{width:44px;height:44px}button:active{transform:scale(.98)}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Allow viewers time to follow the film returning to the paint. */
+.film{transition:transform 950ms cubic-bezier(.22,.61,.36,1),opacity 550ms,fill 550ms}.guide-group{transition:opacity 650ms}@media(prefers-reduced-motion:reduce){*{transition:none!important}}

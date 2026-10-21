@@ -1,75 +1,72 @@
-/* State and animation sequencing. The view is the only DOM adapter. */
+/* Every film selection lifts briefly, then settles onto the vehicle. */
 window.Alvion = window.Alvion || {};
-
-Alvion.createPpfController = function createPpfController(view, catalog, environment) {
-  const state = {
-    packageId: 'front', exploded: true,
-    colorIndex: 0, filmColorIndex: 0, phase: 'idle'
-  };
-  let timers = [];
+Alvion.createPpfController = function (view, catalog, environment) {
+  const state = { packageId: 'front', exploded: false, colorIndex: 0, filmColorIndex: 0, phase: 'idle' };
+  let timers = [], destroyed = false, interacted = false;
   const render = () => view.render({ ...state });
-
-  function cancelAnimation() {
+  function cancel() {
     timers.forEach(environment.clearTimer);
     timers = [];
     state.phase = 'idle';
+    state.exploded = false;
   }
-
-  function selectColor(index) {
-    if (!catalog.colors[index]) return;
-    cancelAnimation();
-    state.colorIndex = index;
+  function applyFilm() {
+    cancel();
     if (environment.prefersReducedMotion()) {
-      state.filmColorIndex = index;
+      state.filmColorIndex = state.colorIndex;
+      if (state.packageId === 'front') state.phase = 'lift';
       render();
       return;
     }
-
     state.phase = 'lift';
     render();
+    if (state.packageId === 'front') return;
     timers.push(environment.setTimer(() => {
-      state.filmColorIndex = index;
+      state.filmColorIndex = state.colorIndex;
       state.phase = 'color';
       render();
     }, catalog.timing.recolor));
-    timers.push(environment.setTimer(() => {
-      state.phase = 'return';
-      render();
-    }, catalog.timing.return));
-    timers.push(environment.setTimer(() => {
-      state.phase = 'idle';
-      timers = [];
-      render();
-    }, catalog.timing.complete));
+    timers.push(environment.setTimer(() => { state.phase = 'return'; render(); }, catalog.timing.return));
+    timers.push(environment.setTimer(() => { state.phase = 'idle'; timers = []; render(); }, catalog.timing.complete));
   }
-
-  function selectPackage(packageId) {
-    if (!catalog.packages[packageId]) return;
-    cancelAnimation();
-    state.packageId = packageId;
-    if (packageId === 'color') selectColor(state.colorIndex);
-    else render();
+  function selectPackage(id) {
+    if (!catalog.packages[id] || destroyed) return;
+    interacted = true;
+    state.packageId = id;
+    applyFilm();
   }
-
-  function toggleExploded() {
-    if (state.packageId === 'color') return;
-    state.exploded = !state.exploded;
-    render();
+  function selectColor(index) {
+    if (!catalog.colors[index] || destroyed) return;
+    interacted = true;
+    state.colorIndex = index;
+    applyFilm();
   }
-
-  view.bind({ selectPackage, selectColor, toggleExploded });
+  function replay() { if (!destroyed) { interacted = true; applyFilm(); } }
+  view.bind({ selectPackage, selectColor, toggleExploded: replay });
   render();
-  return { destroy: cancelAnimation };
+  if (view.ready) view.ready.then(() => { if (!interacted && !destroyed) applyFilm(); });
+  return {
+    destroy() { destroyed = true; cancel(); },
+    settle() { cancel(); state.filmColorIndex = state.colorIndex; if(state.packageId === 'front') state.phase='lift'; render(); }
+  };
 };
 
-// Composition root: wires browser services to each independent instance.
-document.querySelectorAll('[data-alvion-ppf], #ppf-studio').forEach(host => {
-  if (host.shadowRoot) return;
-  const catalog = Alvion.ppfCatalog;
-  const view = Alvion.createPpfView(host, catalog);
-  Alvion.createPpfController(view, catalog, {
-    setTimer: (callback, delay) => window.setTimeout(callback, delay),
-    clearTimer: timer => window.clearTimeout(timer),
-    prefersReducedMotion: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  });
-});
+(() => {
+  const hosts = document.querySelectorAll('[data-alvion-ppf], #ppf-studio');
+  const initialize = host => {
+    if (host.shadowRoot) return;
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
+    const view = Alvion.createPpfView(host, Alvion.ppfCatalog);
+    const controller = Alvion.createPpfController(view, Alvion.ppfCatalog, {
+      setTimer: (callback, delay) => setTimeout(callback, delay),
+      clearTimer: timer => clearTimeout(timer),
+      prefersReducedMotion: () => preference.matches
+    });
+    preference.addEventListener('change', () => { if (preference.matches) controller.settle(); });
+  };
+  if (!('IntersectionObserver' in window)) { hosts.forEach(initialize); return; }
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { observer.unobserve(entry.target); initialize(entry.target); }
+  }), { rootMargin: '400px 0px' });
+  hosts.forEach(host => observer.observe(host));
+})();

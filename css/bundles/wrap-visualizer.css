@@ -1,0 +1,364 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-1.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-2.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-3.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-1.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-2.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-3.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-1.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-2.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-3.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-1.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-2.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-3.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../assets/fonts/inter-6.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*{box-sizing:border-box}body{margin:0;background:#080a0c;color:#ebebea;font-family:"Inter Tight",Arial,sans-serif}button,a,input{ -webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid #d6e7fa;outline-offset:5px}header{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;padding:30px 30px;font-size:11px;letter-spacing:.18em}header span{color:#9299a1;font-size:9px}main{max-width:1200px;margin:auto;padding:32px 30px 60px}.intro{display:flex;align-items:end;justify-content:space-between;gap:24px}.eyebrow{font-size:10px;letter-spacing:.2em;color:#949eac}h1{font-size:clamp(36px,5vw,64px);font-weight:400;letter-spacing:-.055em;margin:15px 0}h1 em{font-family:'Instrument Serif',Georgia;font-weight:400}.intro>p{max-width:300px;color:#949aa3;font-size:13px;line-height:1.7}.studio{margin-top:28px;border:1px solid #ffffff10;border-radius:26px;overflow:hidden;background:#0c0e10}.topline{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;font-size:10px;letter-spacing:.12em;color:#a6acb6}.topline b{font-weight:400;color:#eee}.car{position:relative;padding:10px 20px 0;background:#0b0d0e}.car svg{display:block;width:100%;height:auto}.car rect{transition:opacity .45s}.viewlabel{display:flex;justify-content:space-between;padding:12px 28px 22px;color:#848c96;font-size:10px}.compare{background:#ffffff06;border:1px solid #ffffff25;color:#cbd0d8;padding:10px 15px;border-radius:30px;font-size:11px}.compare[aria-pressed=true]{background:#ebebea;color:#111}.controls{border-top:1px solid #ffffff10;display:grid;grid-template-columns:1fr 1fr;padding:28px;gap:44px;background:#11151a}.label{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.12em;color:#8e99a8;margin-bottom:20px}.label output{letter-spacing:0;color:#eee;font-size:13px}.swatches{display:flex;flex-wrap:wrap;gap:13px}.swatches button{border:1px solid #ffffff20;background:var(--color);width:33px;height:33px;border-radius:50%;position:relative;box-shadow:inset 0 2px 5px #ffffff22}.swatches button[aria-pressed=true]:after{content:'';position:absolute;inset:-5px;border:1px solid #dfe5ee;border-radius:50%}.finishes{display:flex;gap:8px;flex-wrap:wrap}.finishes button{border:1px solid #ffffff20;border-radius:30px;padding:11px 16px;background:transparent;color:#aeb7c3;font-size:12px}.finishes button[aria-pressed=true]{background:#e4e7ec;color:#10151a;border-color:#e4e7ec}.description{font-size:12px;color:#9aa5b4;line-height:1.6;margin:18px 0 0;min-height:38px}.bottom{padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:15px}.bottom p{margin:4px 0;font-size:13px}.bottom small{font-size:10px;color:#858f9c}.bottom a{padding:14px 21px;background:#e7e7e4;color:#15181e;border-radius:30px;text-decoration:none;font-size:12px}.note{color:#747e8b;font-size:11px;line-height:1.7;max-width:700px;margin:20px 0}.finish-hint{color:#a2acb8;font-size:10px} @media(max-width:650px){header{padding:22px 20px}header span{font-size:8px}main{padding:15px 16px 35px}.intro{display:block}.intro>p{max-width:34ch}.studio{margin-top:22px;border-radius:22px}.topline{padding:18px;font-size:8px}.car{padding:30px 0 16px}.viewlabel{padding:0 18px 20px}.controls{grid-template-columns:1fr;gap:30px;padding:24px 20px}.bottom{padding:20px;align-items:start}.bottom a{padding:13px 16px;white-space:nowrap}.swatches{gap:15px}.swatches button{width:30px;height:30px}.description{min-height:0}.compare{font-size:10px;padding:9px 12px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.comparison{position:relative;--split:50%;isolation:isolate}.original-car{display:block;width:100%}.painted{position:absolute;inset:0;clip-path:inset(0 0 0 var(--split));pointer-events:none}.divider{position:absolute;left:var(--split);top:0;bottom:0;width:2px;background:#eee;transform:translateX(-50%);pointer-events:none}.divider span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:48px;height:48px;border:2px solid #fff;border-radius:50%;background:#10151ac9;box-shadow:0 0 20px #0005;color:white;font-size:24px;white-space:pre;letter-spacing:4px;padding-left:4px}.wipe{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y;z-index:4}.comparison:focus-within{outline:2px solid #c6dcf9;outline-offset:2px}.compare-labels{position:absolute;inset:8px 12px auto;display:flex;justify-content:space-between;pointer-events:none;font-size:8px;letter-spacing:.1em;color:#c6ced9}.controls{grid-template-columns:1.6fr 1fr;gap:30px}.swatches{display:grid;grid-template-columns:1fr 1fr;gap:8px}.swatches button{display:flex;align-items:center;gap:10px;width:100%;height:auto;min-height:53px;border-radius:10px;background:#ffffff03;padding:9px;text-align:left;box-shadow:none}.swatches button[aria-pressed=true]{border-color:#c5d5e6;background:#c5d5e60c}.swatches button[aria-pressed=true]:after{display:none}.swatches button i{width:26px;height:26px;flex-shrink:0;background:var(--color);border-radius:50%;border:1px solid #ffffff26}.swatches button span{font-size:10px;color:#ddd;line-height:1.4}.swatches button small{display:block;font-size:9px;color:#8793a4;margin-top:2px}.swatches button[hidden]{display:none}.note a{color:#b6c9e2}.label output{font-size:11px}.car{padding:10px 20px 0}@media(max-width:650px){.controls{grid-template-columns:1fr}.controls section:last-child{grid-row:1}.car{padding:25px 0 16px}.divider span{width:38px;height:38px;font-size:18px}.viewlabel{gap:12px;line-height:1.5}.finish-hint{display:none}}
+
+.controls{grid-template-columns:1fr}.controls section:last-child{grid-row:1}.description{min-height:0;margin-top:12px}.swatches{grid-template-columns:repeat(5,minmax(0,1fr))}.finishes button{min-width:90px}.controls{gap:24px}@media(max-width:800px){.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+body{background:transparent}main{padding:20px 0 10px;max-width:none}.note{padding:0 12px}@media(max-width:650px){main{padding:12px 0}.intro{padding:0 8px}}
+
+/* ALVION — Tesla preview stage: canvas render, 3D tilt and light sweep. */
+.car-stage{position:relative;perspective:1400px;--rx:0deg;--ry:0deg;--sweep:.5}
+.car-tilt{position:relative;transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.car-canvas{display:block;width:100%;height:auto;aspect-ratio:1536/560;opacity:0;transition:opacity .5s}
+.car-stage.is-ready .car-canvas{opacity:1}
+.car-sweep{position:absolute;inset:0;pointer-events:none;opacity:0;mix-blend-mode:screen;
+ background:linear-gradient(102deg,transparent 0%,transparent 38%,rgba(255,255,255,.9) 49%,rgba(255,255,255,.25) 53%,transparent 64%,transparent 100%);
+ background-size:260% 100%;background-position:130% 0;-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.car-sweep.run{animation:car-sweep 1.15s cubic-bezier(.45,.05,.25,1) both}
+@keyframes car-sweep{0%{opacity:var(--sweep);background-position:130% 0}85%{opacity:var(--sweep)}100%{opacity:0;background-position:-30% 0}}
+@media(hover:none){.car-tilt{animation:car-float 7s ease-in-out infinite}}
+@keyframes car-float{0%,100%{transform:rotateY(-1.4deg) translateY(0)}50%{transform:rotateY(1.4deg) translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.car-tilt,.car-sweep.run{animation:none;transition:none}}
+.car-canvas.is-drawn{opacity:1}
+#alvion-configurator .av-car-stage{margin:18px auto 10px;max-width:987px}
+
+.comparison .car-canvas{width:100%}.painted .car-canvas{position:absolute;inset:0}.car-stage .comparison{border-radius:4px}
+
+/* Unified, readable typography. Inter falls back to the system sans-serif. */
+:root{--alvion-font:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body,body *{font-family:var(--alvion-font)!important}
+body{font-weight:400;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.page-title,.big-title{font-weight:500;letter-spacing:-.035em!important;line-height:1.08!important}
+h1 em,h2 em,h3 em,.page-title em,.big-title em{font-style:normal;font-size:1em!important;line-height:inherit!important;font-weight:inherit}
+p{line-height:1.65}
+.eyebrow,.section-kicker,.meta,.hero-spec,.footer-bottom,.desktop-nav,.brand-copy{letter-spacing:.08em!important}
+.desktop-nav a,.header-cta{font-size:12px}
+.glass-nav span{font-size:11px;letter-spacing:.01em}
+.cookie-banner{max-width:460px;left:16px;right:16px;bottom:16px;padding:12px 14px;gap:12px;border-radius:14px;font-size:12px;line-height:1.5;display:flex;flex-direction:column;align-items:stretch}
+.cookie-banner[hidden]{display:none}
+.cookie-banner p{font-size:12px;line-height:1.5;margin:0}
+.cookie-actions{display:flex;justify-content:flex-end;gap:8px}
+.cookie-actions button{min-height:44px;padding:0 18px;font-size:12px;flex:1}
+@media(max-width:820px){.cookie-banner{left:12px;right:12px;bottom:calc(88px + env(safe-area-inset-bottom,0px));padding:10px 12px;gap:8px;max-width:420px}.cookie-banner p{font-size:11px}.cookie-actions button{font-size:12px}.clarity-copy h1{line-height:1.07!important}}
+
+/* Shared studio direction, with layouts tailored to each tool. */
+.studio-kicker,.studio-step{font-size:10px;letter-spacing:.12em;color:#9aa7a9;line-height:1.6}
+.studio-aside{padding:36px 30px;border-left:1px solid #2b3032;background:#111517;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.studio-aside h2,.studio-aside h3{font-size:30px!important;line-height:1.15!important;font-weight:400;letter-spacing:-.035em;margin:12px 0 30px}
+.studio-spec{padding:16px 0;border-top:1px solid #2b3032}.studio-spec span{display:block;color:#8f9c9f;font-size:11px;margin-bottom:7px}.studio-spec strong{font-weight:400;font-size:17px;color:#edf0ec}.studio-help{font-size:12px;line-height:1.8;color:#9ba8ab;margin:20px 0}.studio-pill{align-self:flex-start;border:1px solid #394246;border-radius:30px;padding:9px 12px;color:#b7c5c8;font-size:9px;letter-spacing:.09em}
+/* Vinyl: photographic comparison beside a live film summary. */
+.wrap-visualizer-section{max-width:1440px!important;padding:0 44px!important;margin:55px auto!important}
+body:has(.wrap-workbench) main{padding:20px 0 10px}.wrap-workbench{display:grid;grid-template-columns:minmax(0,1fr) 260px;border-top:1px solid #2b3032}.wrap-scene{align-self:center;min-width:0}.wrap-workbench .car{padding:32px 0 12px;background:#101214}.wrap-workbench .viewlabel{font-size:11px;padding:16px 24px 24px}.studio:has(.wrap-workbench){border:1px solid #2b3032;border-radius:22px;background:#101214}.studio:has(.wrap-workbench) .topline{padding:22px 26px;letter-spacing:.1em}.studio:has(.wrap-workbench) .controls{background:#141719;padding:28px;border-color:#2b3032;gap:24px}.studio:has(.wrap-workbench) .finishes{display:inline-flex;padding:5px;background:#222729;border-radius:12px;gap:5px}.studio:has(.wrap-workbench) .finishes button{border:0;border-radius:8px;min-height:44px;padding:12px 28px;font-size:13px}.studio:has(.wrap-workbench) .finishes button[aria-pressed=true]{background:#edf1eb}.studio:has(.wrap-workbench) .label{font-size:11px;letter-spacing:.09em}.studio:has(.wrap-workbench) .swatches{gap:10px}.studio:has(.wrap-workbench) .swatches button{min-height:68px;padding:12px;border-radius:10px;border-color:#30383a;transition:background .3s,border-color .3s}.studio:has(.wrap-workbench) .swatches button span{font-size:11px}.studio:has(.wrap-workbench) .swatches button small{font-size:10px}.studio:has(.wrap-workbench) .swatches button[aria-pressed=true]{background:#b7e2e912;border-color:#a6dce8}.studio:has(.wrap-workbench) .bottom{padding:28px;background:#141719;border-top:1px solid #2b3032}.studio:has(.wrap-workbench) .bottom a{border-radius:8px;min-width:190px;padding:18px 22px;text-align:center;font-size:13px}.studio:has(.wrap-workbench) .bottom small{font-size:10px;letter-spacing:.1em}.studio:has(.wrap-workbench) .bottom p{font-size:15px;margin-top:10px}
+/* Tint: a quiet glass studio, with a live VLT readout. */
+#alvion-configurator{max-width:1440px!important;margin:45px auto!important;padding:0 44px!important}
+#alvion-configurator .av-surface{background:#101214;border-color:#2b3032;border-radius:22px}
+#alvion-configurator .av-header{padding:22px 28px;font-size:10px;border-color:#2b3032;letter-spacing:.12em}
+#alvion-configurator .av-heading{padding:35px 28px 22px}#alvion-configurator .av-heading h2{font-size:clamp(36px,4.2vw,58px);font-weight:400;letter-spacing:-.04em}#alvion-configurator .av-heading em{font-style:normal;color:#9ba6a8}
+.tint-workbench{display:grid;grid-template-columns:minmax(0,1fr) 280px;border-top:1px solid #2b3032}#alvion-configurator .av-vehicle{padding:30px 0 12px;background:#101214;min-width:0;align-self:center}#alvion-configurator .av-vehicle-caption{padding:20px 28px 12px;font-size:10px;letter-spacing:.1em}.tint-workbench .studio-spec .tint-live-number{font-size:52px;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:#c9e8ed}
+#alvion-configurator .av-controls{padding:28px;background:#141719;border-color:#2b3032;gap:30px}#alvion-configurator .av-control-label label,#alvion-configurator .av-control-label span{font-size:11px;letter-spacing:.09em}#alvion-configurator .av-control-label output{font-size:15px}#alvion-configurator input[type=range]{accent-color:#b7e2e9;height:44px}#alvion-configurator .av-presets{padding:5px;background:#222729;border-radius:12px;gap:5px;max-width:650px}#alvion-configurator .av-presets button{border-radius:8px;min-height:48px;border:0;background:none;font-size:14px}#alvion-configurator .av-presets button[aria-pressed=true]{background:#edf1eb;color:#101214}#alvion-configurator #av-tint-help{font-size:12px;line-height:1.7;max-width:65ch}#alvion-configurator .av-footer{padding:28px;background:#141719;border-color:#2b3032}#alvion-configurator .av-summary{font-size:17px}#alvion-configurator .av-quote{background:#edf1eb;color:#101214;border:0;border-radius:8px;padding:18px 24px;min-width:190px;font-size:13px}#alvion-configurator .av-disclaimer{padding:0 28px 25px;background:#141719;font-size:11px;line-height:1.7}
+/* Estimate: vehicle gallery, large stage and an estimate sidebar. */
+.selector-section{max-width:1440px;margin:auto;padding:45px 44px!important}#alvion-car-preview{background:#101214;border:1px solid #2b3032;border-radius:22px;padding:32px;overflow:hidden}#alvion-car-preview h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.04em;margin:14px 0}#alvion-car-preview .estimate-intro{font-size:14px;color:#9ba8ab;margin:0 0 28px}#alvion-car-preview .cars{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:14px 0 26px}#alvion-car-preview .cars button{background:#181d20;border:1px solid #30383a;border-radius:10px;padding:10px;cursor:pointer;transition:border-color .3s,background .3s}#alvion-car-preview .cars button[aria-pressed=true]{background:#c2e5ed12;border-color:#b7dce4}#alvion-car-preview .cars canvas{height:76px}#alvion-car-preview .cars span{font-size:12px;color:#d8e1e2}
+#alvion-car-preview .estimate-workbench{display:grid;grid-template-columns:minmax(0,1fr) 300px;border-top:1px solid #2b3032;border-bottom:1px solid #2b3032;margin:0 -32px;background:#141719}#alvion-car-preview .stage{grid-row:1/3;margin:0;border-radius:0;background:radial-gradient(ellipse at center,#222b2e,#101214 72%);padding:26px;display:flex;flex-direction:column;justify-content:center}#alvion-car-preview .stage canvas{height:380px}#alvion-car-preview .stage .model{font-size:14px;letter-spacing:.04em}#alvion-car-preview .stage .muted{font-size:10px}#alvion-car-preview .controls{display:flex;flex-direction:column;gap:24px;margin:0;padding:28px;border-left:1px solid #2b3032}#alvion-car-preview label{font-size:11px;letter-spacing:.08em;color:#a9b8bc}#alvion-car-preview select{background:#202729;border-color:#3b4549;border-radius:8px;font-size:14px;min-height:50px;padding:12px}#alvion-car-preview .swatches{gap:10px}#alvion-car-preview .swatches button{background:#141719;min-height:34px;width:34px;border-color:#394548}#alvion-car-preview .swatches button[aria-pressed=true]{border-color:#e3f5f7;box-shadow:0 0 0 2px #a6dce825}#alvion-car-preview .quote{display:block;margin:0;padding:26px 28px;border-top:1px solid #2b3032;border-left:1px solid #2b3032}#alvion-car-preview .price{font-size:40px;line-height:1.2;margin:10px 0;letter-spacing:-.045em}#alvion-car-preview .warranty{font-size:11px;line-height:1.7;color:#a1b1b5}#alvion-car-preview .cta{width:100%;margin-top:24px;min-height:52px;border-radius:8px;background:#edf1eb;font-size:13px;cursor:pointer}#alvion-car-preview .foot{font-size:12px;color:#929fa3;line-height:1.8}#alvion-car-preview .secondary{border-color:#2b3032}#alvion-car-preview .muted{color:#9ba8ab}
+@media(max-width:950px){.wrap-workbench,.tint-workbench{grid-template-columns:1fr}.studio-aside{border-left:0;border-top:1px solid #2b3032;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;padding:24px}.studio-aside h2,.studio-aside h3{margin:0;font-size:25px!important}.studio-aside .studio-kicker{grid-column:1/-1;margin:0}.studio-aside .studio-help{margin:0}.studio-aside .studio-pill{display:none}.studio-spec{padding:8px 0}.wrap-workbench .car{padding:20px 0 0}#alvion-car-preview .estimate-workbench{grid-template-columns:minmax(0,1fr) 250px}#alvion-car-preview .stage canvas{height:300px}}
+@media(max-width:650px){.wrap-visualizer-section,#alvion-configurator{padding:0 14px!important;margin:28px auto!important}.selector-section{padding:28px 14px!important}.studio-aside{padding:20px;gap:15px}.studio-aside h2,.studio-aside h3{font-size:23px!important}.studio-help{font-size:11px}.studio:has(.wrap-workbench) .controls{padding:22px 18px}.studio:has(.wrap-workbench) .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.studio:has(.wrap-workbench) .finishes{width:100%}.studio:has(.wrap-workbench) .finishes button{padding:12px;min-width:0;flex:1}.studio:has(.wrap-workbench) .bottom{padding:22px 18px;flex-direction:column;align-items:stretch;gap:18px}.studio:has(.wrap-workbench) .bottom a{width:100%}#alvion-configurator .av-heading{padding:26px 20px}#alvion-configurator .av-header{padding:20px}#alvion-configurator .av-controls,#alvion-configurator .av-footer{padding:22px 20px}#alvion-configurator .av-footer{align-items:stretch;flex-direction:column;gap:18px}#alvion-configurator .av-quote{width:100%}#alvion-configurator .av-presets button{font-size:13px}#alvion-configurator .av-disclaimer{padding:0 20px 22px}#alvion-car-preview{padding:24px 18px}#alvion-car-preview .cars{grid-template-columns:repeat(3,minmax(0,1fr))}#alvion-car-preview .cars canvas{height:55px}#alvion-car-preview .cars span{font-size:10px}#alvion-car-preview .estimate-workbench{grid-template-columns:1fr;margin:0 -18px}#alvion-car-preview .stage{grid-row:auto;padding:20px 12px}#alvion-car-preview .stage canvas{height:230px}#alvion-car-preview .controls{padding:24px 20px;border-left:0;border-top:1px solid #2b3032}#alvion-car-preview .quote{border-left:0;padding:24px 20px}#alvion-car-preview h2{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.studio *,#alvion-configurator *,#alvion-car-preview *{transition:none!important}}
+body:has(.wrap-workbench){background:#080a0b}
+#alvion-configurator .av-controls.av-focused{max-width:none;margin:0;border-top:1px solid #2b3032;padding:28px;width:100%}
+#alvion-configurator .av-controls.av-focused .av-tint-controls{max-width:850px;width:100%;margin:auto}
+@media(max-width:650px){#alvion-configurator .av-controls.av-focused{padding:22px 20px}}
+
+/* In the stacked wrap studio, keep the car next to the finish controls. */
+@media(max-width:950px){
+  .wrap-workbench>.studio-aside{order:0;border-top:0;border-bottom:1px solid #2b3032}
+  .wrap-workbench>.wrap-scene{order:1}
+}
+
+/* Keep the hero immediately visible; motion begins below the fold. */
+.quote-button,.header-cta,.submit,.portfolio-filters button {
+  transition:transform 160ms ease,background-color 180ms ease,border-color 180ms ease;
+}
+.quote-button:active,.header-cta:active,.submit:active,.portfolio-filters button:active{transform:scale(.98)}
+.mobile-menu {
+  transform:translateY(-8px);opacity:0;visibility:hidden;
+  transition:opacity 240ms ease,transform 240ms cubic-bezier(.2,.7,.2,1),visibility 0s 240ms;
+}
+.mobile-menu.open {
+  opacity:1;transform:translateY(0);visibility:visible;
+  transition:opacity 240ms ease,transform 240ms cubic-bezier(.2,.7,.2,1),visibility 0s;
+}
+[data-alvion-ppf],#ppf-studio{min-height:700px}
+.car-tilt{animation:none!important}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+.footer-brand img{width:52px;height:auto;max-height:76px;object-fit:contain;flex:0 0 auto}.brand img{height:auto;object-fit:contain}
+.car-tilt{transform:none!important;will-change:auto}.car-sweep{display:none}
+
+@media(min-width:821px){.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Mobile hero: a portrait backdrop keeps the complete car behind the copy. */
+.hero-picture{display:contents}
+.home-selected .selected-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1100px){.home-selected .selected-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.home-selected .selected-grid a:first-child{grid-column:auto}.home-selected .selected-grid a:first-child img{height:175px}}
+@media(max-width:820px){
+  .home-page .porsche-hero{display:block;position:relative;isolation:isolate;overflow:hidden;min-height:0;height:auto;aspect-ratio:auto;padding:0;background:#101619}
+  .home-page .porsche-hero .clarity-copy{position:relative;z-index:2;width:100%;padding:28px 24px calc(50vw + 12px);background:none}
+  .home-page .porsche-hero .clarity-car{position:absolute;inset:auto 0 0;z-index:0;display:block;width:100%;max-width:100%;height:auto;min-height:0;aspect-ratio:2/3;object-fit:contain;object-position:center bottom;margin:0;filter:none;mask-image:linear-gradient(to bottom,transparent,#000 20%)}
+  .home-page .porsche-hero::after{display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,10,15,.44),rgba(5,10,15,.2) 50%,transparent 72%)}
+  .home-page .porsche-hero .hero-image-note{position:absolute;z-index:2;inset:auto 16px 14px;display:block;padding:0;color:#e3e7e8;font-size:10px;line-height:1.5;text-align:right;text-shadow:0 1px 5px #000}
+}

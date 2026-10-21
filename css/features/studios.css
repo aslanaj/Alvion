@@ -23,3 +23,9 @@ body:has(.wrap-workbench){background:#080a0b}
 #alvion-configurator .av-controls.av-focused{max-width:none;margin:0;border-top:1px solid #2b3032;padding:28px;width:100%}
 #alvion-configurator .av-controls.av-focused .av-tint-controls{max-width:850px;width:100%;margin:auto}
 @media(max-width:650px){#alvion-configurator .av-controls.av-focused{padding:22px 20px}}
+
+/* In the stacked wrap studio, keep the car next to the finish controls. */
+@media(max-width:950px){
+  .wrap-workbench>.studio-aside{order:0;border-top:0;border-bottom:1px solid #2b3032}
+  .wrap-workbench>.wrap-scene{order:1}
+}
