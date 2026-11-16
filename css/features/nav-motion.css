@@ -1,0 +1,25 @@
+/* Mobile nav bar: one highlight pill that slides between tabs, with a small icon pop.
+   The look of the bar is unchanged; js/shared/nav-motion.js moves the pill. */
+.glass-nav.has-pill a,.glass-nav.has-pill button{position:relative;z-index:1}
+.glass-nav.has-pill a[aria-current=page],.glass-nav.has-pill button[aria-expanded=true],.glass-nav.has-pill button[data-current=true]{background:none!important;box-shadow:none!important}
+.glass-nav .nav-pill{position:absolute;top:0;left:0;z-index:0;pointer-events:none;border-radius:36px;background:rgba(235,240,250,.14);box-shadow:inset 0 1px 1px #ffffff1f,0 2px 10px #0000002e;will-change:transform,width}
+.glass-nav.has-pill svg{transition:transform .2s ease}
+.glass-nav.has-pill .nav-pressed svg{transform:scale(.82)}
+.glass-nav.has-pill .nav-pop svg{animation:alvion-nav-pop .46s cubic-bezier(.3,1.5,.5,1)}
+.glass-nav.has-pill .nav-pop span{animation:alvion-nav-label .36s ease-out}
+@keyframes alvion-nav-pop{0%{transform:scale(.78) translateY(2px)}55%{transform:scale(1.16) translateY(-2px)}100%{transform:none}}
+@keyframes alvion-nav-label{0%{opacity:.4;transform:translateY(2px)}100%{opacity:1;transform:none}}
+/* Pages cross-fade on phones while the bar and header stay still (browsers that support it). */
+@media (max-width:820px) and (prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  .glass-nav{view-transition-name:alvion-nav}
+  .site-header{view-transition-name:alvion-header}
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.24s}
+  ::view-transition-group(alvion-nav),::view-transition-group(alvion-header){animation-duration:0s}
+  ::view-transition-old(alvion-nav),::view-transition-old(alvion-header){display:none}
+  ::view-transition-new(alvion-nav),::view-transition-new(alvion-header){animation:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .glass-nav.has-pill .nav-pop svg,.glass-nav.has-pill .nav-pop span{animation:none}
+  .glass-nav.has-pill svg{transition:none}
+}

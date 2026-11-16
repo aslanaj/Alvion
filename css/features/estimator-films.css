@@ -1,0 +1,15 @@
+/* Estimator film picker: finish or brand tabs, film swatches and the film detail line.
+   Loaded after the services bundle. */
+#alvion-car-preview .film-tabs{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;padding:4px;margin:0 0 14px;background:rgba(235,240,250,.06);border-radius:12px;max-width:100%}
+#alvion-car-preview .film-tabs button{min-height:40px;padding:8px 16px;border:0;border-radius:9px;background:transparent;color:#bdc7d6;font-size:14px;white-space:nowrap}
+#alvion-car-preview .film-tabs button[aria-pressed=true]{background:#ebebea;color:#101722}
+#alvion-car-preview .film-tabs:empty{display:none}
+#alvion-car-preview .swatches{gap:10px}
+#alvion-car-preview .swatches button{width:44px;min-height:44px;padding:5px;border-radius:50%;border-color:rgba(235,235,234,.28)}
+#alvion-car-preview .swatches button[aria-pressed=true]{border-color:#ebebea;box-shadow:0 0 0 2px #ebebea}
+#alvion-car-preview .swatches i{min-height:30px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+#alvion-car-preview .film-detail{margin:12px 0 0;font-size:13px;color:#bdc7d6}
+#alvion-car-preview .film-note{margin:4px 0 0;font-size:12px}
+#alvion-car-preview .vehicle-canvas{opacity:0;transition:opacity .25s ease}
+#alvion-car-preview .vehicle-canvas.is-drawn{opacity:1}
+@media (prefers-reduced-motion:reduce){#alvion-car-preview .vehicle-canvas{transition:none}}

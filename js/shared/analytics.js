@@ -8,12 +8,12 @@
   const get = () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
   const set = v => { try { localStorage.setItem(KEY, v); } catch (e) {} };
 
-  const track = (name, params) => { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); };
+  const track = (name, params) => { if (!inFrame && typeof window.gtag === 'function') window.gtag('event', name, params || {}); };
   window.alvionTrack = track;
 
   let loaded = false;
   function loadGA() {
-    if (loaded || !GA_ID) return;
+    if (loaded || !GA_ID || inFrame) return;
     loaded = true;
     const tag = document.createElement('script');
     tag.async = true;
@@ -71,14 +71,14 @@
 
   // Count the actions that matter for a shop: calls, texts, emails, quote clicks, social visits.
   document.addEventListener('click', event => {
-    const link = event.target.closest && event.target.closest('a');
+    const link = (event.composedPath ? event.composedPath() : [event.target]).find(node => node.matches && node.matches('a')) || (event.target.closest && event.target.closest('a'));
     if (!link) return;
     const href = link.getAttribute('href') || '';
     if (href.startsWith('tel:')) track('click_call');
     else if (href.startsWith('sms:')) track('click_text');
     else if (href.startsWith('mailto:')) track('click_email');
-    else if (/instagram\.com|tiktok\.com|youtube\.com|google\.com\/maps/.test(href)) track('click_social', { link_url: href });
-    else if (link.matches('[data-track="quote"]')) track('click_quote');
+    else if (/instagram\.com|tiktok\.com|youtube\.com|google\.com\/maps|g\.page\/|yelp\.com\//.test(href)) track('click_social', { link_url: href });
+    else if (link.matches('[data-track="quote"]') && !inFrame) track('click_quote');
     else if (/contact\.html/.test(href)) track('click_contact');
   });
 })();

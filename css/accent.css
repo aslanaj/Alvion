@@ -1,0 +1,83 @@
+/* ALVION accent layer. Loaded last on every page.
+   60 / 30 / 10: deep navy base, off-white text, ice blue for things to tap.
+   The accent marks actions and the current choice only. It never colors body text or backgrounds. */
+:root{--accent:#a8c4ec;--accent-hi:#c6daf6;--accent-lo:#5d7fb4;--on-accent:#071226;--accent-ok:#2fa56b;--accent-ok-lo:#1c6f47}
+
+/* Primary actions: raised, sink under the thumb, spring back. */
+.header-cta,.quote-button,.tesla-offer-cta,.faq-cta,.button.primary,.submit,#home-quote-sheet .submit,#alvion-car-preview .cta{
+  background:linear-gradient(180deg,var(--accent-hi),var(--accent))!important;color:var(--on-accent)!important;border:0!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.26),0 4px 0 var(--accent-lo),0 12px 18px -14px var(--accent)!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;overflow:hidden;min-height:48px;
+  transition:transform .14s cubic-bezier(.3,.7,.4,1),box-shadow .14s,filter .2s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.header-cta:hover,.quote-button:hover,.tesla-offer-cta:hover,.faq-cta:hover,.button.primary:hover,.submit:hover,#alvion-car-preview .cta:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.header-cta:active,.quote-button:active,.tesla-offer-cta:active,.faq-cta:active,.button.primary:active,.submit:active,#alvion-car-preview .cta:active{
+  transform:translateY(3px)!important;filter:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 1px 0 var(--accent-lo),0 4px 8px -8px var(--accent)!important}
+.header-cta span,.quote-button span,.redesigned .site-header>.header-cta span{background:rgba(7,18,38,.14)!important;color:var(--on-accent)!important;transition:transform .2s}
+.header-cta:active span,.quote-button:active span,.tesla-offer-cta:active span{transform:translate(2px,-2px)}
+.header-cta:focus-visible,.quote-button:focus-visible,.tesla-offer-cta:focus-visible,.faq-cta:focus-visible,.button.primary:focus-visible,.submit:focus-visible,.circle-cta:focus-visible,#alvion-car-preview .cta:focus-visible{outline:2px solid #ebebea;outline-offset:3px}
+
+/* The closing call to action keeps the pill shape. */
+.b-cta .header-cta{border-radius:40px!important;padding:14px 24px!important;display:inline-flex!important;align-items:center}
+
+/* Round "Start project" button. */
+.circle-cta{background:radial-gradient(circle at 35% 28%,var(--accent-hi),var(--accent) 62%)!important;color:var(--on-accent)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 5px 0 var(--accent-lo),0 18px 26px -16px #000;overflow:hidden;
+  transition:transform .16s cubic-bezier(.3,.7,.4,1),box-shadow .16s,filter .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.circle-cta:hover{filter:brightness(1.07);color:var(--on-accent)!important;transform:none}
+.circle-cta:active{transform:translateY(4px) scale(.97)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 0 var(--accent-lo),0 6px 10px -8px #000}
+
+/* Touch ripple, added by js/shared/press.js. */
+.acc-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.38);transform:scale(0);pointer-events:none;animation:acc-ripple .5s ease-out forwards}
+@keyframes acc-ripple{to{transform:scale(1);opacity:0}}
+
+/* Quiet controls still answer a press. */
+.service-links a,.button,.glass-nav a,.glass-nav button,.reply-options label,#alvion-car-preview .cars button,#alvion-car-preview .swatches button,#alvion-car-preview .film-tabs button{
+  transition:transform .12s ease,background-color .18s,color .18s,border-color .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.service-links a:active,.button:active,.reply-options label:active,#alvion-car-preview .cars button:active,#alvion-car-preview .film-tabs button:active{transform:scale(.96)}
+#alvion-car-preview .swatches button:active{transform:scale(.88)}
+.glass-nav a:active,.glass-nav button:active{transform:scale(.9)}
+
+/* Reply choice. In the quote sheet the three options are equal columns, so the highlight slides between them.
+   The contact page form uses free-width pills that can wrap, so there the chosen pill itself takes the accent. */
+#home-quote-sheet .reply-options{position:relative}
+#home-quote-sheet .reply-options::before{content:"";position:absolute;top:0;bottom:0;left:0;width:calc((100% - 14px)/3);border-radius:9px;
+  background:linear-gradient(180deg,var(--accent-hi),var(--accent));box-shadow:0 3px 0 var(--accent-lo);
+  transition:transform .28s cubic-bezier(.3,1.3,.5,1);z-index:0}
+#home-quote-sheet .reply-options:has(label:nth-of-type(2) :checked)::before{transform:translateX(calc(100% + 7px))}
+#home-quote-sheet .reply-options:has(label:nth-of-type(3) :checked)::before{transform:translateX(calc(200% + 14px))}
+#home-quote-sheet .reply-options label{position:relative;z-index:1}
+#home-quote-sheet .reply-options label:has(:checked){background:transparent!important;border-color:transparent!important;color:var(--on-accent)!important}
+.reply-options label:has(:checked){background:linear-gradient(180deg,var(--accent-hi),var(--accent))!important;border-color:transparent!important;color:var(--on-accent)!important;box-shadow:0 3px 0 var(--accent-lo)}
+#home-quote-sheet .reply-options label:has(:checked){box-shadow:none}
+
+/* Send request: sending, then sent. */
+form[aria-busy=true] .submit{opacity:1!important;filter:saturate(.85)}
+form[aria-busy=true] .submit::before{content:"";display:inline-block;width:16px;height:16px;margin-right:10px;vertical-align:-2px;border-radius:50%;border:2px solid var(--on-accent);border-right-color:transparent;animation:acc-spin .7s linear infinite}
+@keyframes acc-spin{to{transform:rotate(360deg)}}
+form[data-sent=true] .submit{opacity:1!important;background:linear-gradient(180deg,#4cc48a,var(--accent-ok))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 0 var(--accent-ok-lo)!important;animation:acc-pop .35s cubic-bezier(.3,1.6,.5,1)}
+form[data-sent=true] .submit::before{content:"✓";margin-right:8px}
+@keyframes acc-pop{from{transform:scale(.95)}to{transform:scale(1)}}
+
+/* Estimator: the chosen film tab uses the accent. */
+#alvion-car-preview .film-tabs button[aria-pressed=true]{background:linear-gradient(180deg,var(--accent-hi),var(--accent));color:var(--on-accent)}
+
+@media (prefers-reduced-motion:reduce){
+  .header-cta,.quote-button,.tesla-offer-cta,.faq-cta,.button.primary,.submit,.circle-cta,#alvion-car-preview .cta,#home-quote-sheet .reply-options::before,.glass-nav a,.glass-nav button{transition:none!important;animation:none!important}
+  .acc-ripple{display:none}
+  form[aria-busy=true] .submit::before{animation-duration:1.6s}
+}
+
+/* Estimator vehicle row on phones: swipe sideways without the bright system scrollbar. */
+#alvion-car-preview .cars{scrollbar-width:none;-ms-overflow-style:none}
+#alvion-car-preview .cars::-webkit-scrollbar{display:none}
+
+/* Press feedback on every other tappable control (cards, tabs, swatches, links). */
+.cars button,.film-tabs button,#alvion-car-preview .swatches button,#alvion-car-preview select,.service-link,.expertise-card,.selected-grid a,.portfolio-project .project-cover,.testimonial-controls button,.testimonial-links a,.quiet-link,.area-links a,.social-links a,.legal-links a,.mobile-menu a,.mobile-toggle,.sheet-close,.faq-list summary,details>summary,.contact-details a,.price-card a,.footer-contact a{transition:transform .16s ease,background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease,opacity .2s ease}
+.cars button:active,.film-tabs button:active,.service-link:active,.expertise-card:active,.selected-grid a:active,.portfolio-project .project-cover:active{transform:scale(.97)}
+#alvion-car-preview .swatches button:active{transform:scale(.86)}
+.testimonial-controls button:active,.mobile-toggle:active,.sheet-close:active{transform:scale(.9)}
+.testimonial-links a:active,.quiet-link:active,.area-links a:active,.social-links a:active,.legal-links a:active,.mobile-menu a:active,.faq-list summary:active,details>summary:active,.contact-details a:active,.price-card a:active,.footer-contact a:active{transform:scale(.97);opacity:.75}
+@media (prefers-reduced-motion:reduce){.cars button,.film-tabs button,#alvion-car-preview .swatches button,.service-link,.expertise-card,.selected-grid a,.portfolio-project .project-cover,.testimonial-controls button,.testimonial-links a,.quiet-link,.area-links a,.social-links a,.legal-links a,.mobile-menu a,.mobile-toggle,.sheet-close,.faq-list summary,details>summary,.contact-details a,.price-card a,.footer-contact a{transition:none!important;transform:none!important}}

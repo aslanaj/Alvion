@@ -1,7 +1,7 @@
 /* Every film selection lifts briefly, then settles onto the vehicle. */
 window.Alvion = window.Alvion || {};
 Alvion.createPpfController = function (view, catalog, environment) {
-  const state = { packageId: 'front', exploded: false, colorIndex: 0, filmColorIndex: 0, phase: 'idle' };
+  const state = { packageId: 'front', exploded: false, colorIndex: 0, filmColorIndex: 0, finish: 'gloss', phase: 'idle' };
   let timers = [], destroyed = false, interacted = false;
   const render = () => view.render({ ...state });
   function cancel() {
@@ -41,8 +41,14 @@ Alvion.createPpfController = function (view, catalog, environment) {
     state.colorIndex = index;
     applyFilm();
   }
+  function selectFinish(id) {
+    if (!catalog.finishes.some(finish => finish[0] === id) || destroyed) return;
+    interacted = true;
+    state.finish = id;
+    applyFilm();
+  }
   function replay() { if (!destroyed) { interacted = true; applyFilm(); } }
-  view.bind({ selectPackage, selectColor, toggleExploded: replay });
+  view.bind({ selectPackage, selectColor, selectFinish, toggleExploded: replay });
   render();
   if (view.ready) view.ready.then(() => { if (!interacted && !destroyed) applyFilm(); });
   return {
