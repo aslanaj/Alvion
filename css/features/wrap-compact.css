@@ -1,0 +1,44 @@
+/* Compact: on a desktop the car, finishes, films and quote share one screen */
+.finishes button,.swatches button,.compare,.bottom a{transition:transform .14s ease,background-color .2s ease,border-color .2s ease}
+.finishes button:active,.compare:active,.bottom a:active{transform:scale(.96)}
+.swatches button:active{transform:scale(.9)}
+@media(prefers-reduced-motion:reduce){.finishes button:active,.compare:active,.bottom a:active,.swatches button:active{transform:none}}
+@media(min-width:1000px){
+  html body main{padding:6px 0 4px!important;max-width:none!important}
+  main .intro{display:block!important;margin:0 0 10px!important}
+  main .intro .eyebrow,main .intro>p{display:none!important}
+  main .intro h1{font-size:24px!important;line-height:1.2!important;letter-spacing:-.5px!important;margin:0!important}
+  main .studio{margin-top:0!important;display:grid!important;grid-template-columns:minmax(0,1fr) 352px;grid-template-rows:auto 1fr auto}
+  main .studio .topline{grid-column:1;grid-row:1;padding:12px 20px!important}
+  main .studio .compare{padding:7px 14px!important;min-height:0!important}
+  main .studio .wrap-workbench{display:contents!important}
+  main .studio .wrap-scene{grid-column:1;grid-row:2/4;align-self:center}
+  main .studio .wrap-workbench .car{padding:4px 0 0!important}
+  main .studio .wrap-workbench .viewlabel{padding:10px 20px 14px!important}
+  main .studio .studio-aside{display:none!important}
+  main .studio .controls{grid-column:2;grid-row:1/3;display:flex!important;flex-direction:column-reverse;justify-content:flex-end;gap:16px!important;padding:16px 18px!important;border-top:0!important;border-left:1px solid #2b3032!important}
+  main .studio .controls .label{margin:0 0 8px!important}
+  main .studio .finishes{display:flex!important;width:100%}
+  main .studio .finishes button{flex:1;min-width:0!important;min-height:38px!important;padding:8px 6px!important}
+  main .studio .description{font-size:12px!important;line-height:1.45!important;margin:8px 0 0!important}
+  main .studio .swatches{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important}
+  main .studio .swatches button{min-height:0!important;width:100%!important;aspect-ratio:1;padding:5px!important;border-radius:12px!important;justify-content:center}
+  main .studio .swatches button i{width:100%!important;height:100%!important;border-radius:8px!important}
+  main .studio .swatches button span{display:none!important}
+  main .studio .bottom{grid-column:2;grid-row:3;padding:12px 18px 14px!important;border-left:1px solid #2b3032;flex-direction:column;align-items:stretch!important;gap:8px!important}
+  main .studio .bottom p{margin:2px 0 0!important;font-size:14px!important}
+  main .studio .bottom a{padding:13px 18px!important;min-width:0!important}
+  main>.note{margin:8px 4px 0!important;font-size:10.5px!important;line-height:1.5!important}
+}
+@media(max-width:650px){
+  main .intro{margin-bottom:12px!important}
+  main .intro>p{display:none}
+  main .studio .studio-aside{display:none!important}
+  main .studio{margin-top:12px!important}
+  main .studio .controls{gap:16px!important;padding:16px!important}
+  main .studio .swatches{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important}
+  main .studio .swatches button{min-height:0!important;aspect-ratio:1;padding:5px!important;justify-content:center}
+  main .studio .swatches button i{width:100%!important;height:100%!important;border-radius:8px!important}
+  main .studio .swatches button span{display:none!important}
+  main .studio .bottom{padding:16px!important;gap:12px!important}
+}

@@ -166,3 +166,11 @@ Alvion.ppfCatalog = {
     "complete": 2200
   }
 };
+
+/* Clear film finishes. Satin and matte clear are shown on a dark car, where the change in finish is easiest to see. */
+Alvion.ppfCatalog.finishes = [["gloss", "Gloss clear", "Gloss"], ["satin", "Satin clear", "Satin"], ["matte", "Matte clear", "Matte"]];
+Alvion.ppfCatalog.darkPaint = "#0d0e11";
+Alvion.ppfCatalog.art = { photo: "assets/ppf-porsche-911.webp", mask: "assets/ppf-porsche-911-mask.webp?v=20261113-ppf2", width: 1536, height: 1024 };
+/* Color PPF: the same PurePPF and XPEL list as the estimator (js/data/ppf-colors.js): [label, screen color, finish, brand]. */
+if (Alvion.ppfColors) Alvion.ppfCatalog.colors = Alvion.ppfColors.map(([brand, name, finish, hex]) => [brand + " " + name, hex, finish, brand]);
+else Alvion.ppfCatalog.colors = Alvion.ppfCatalog.colors.map(([name, hex]) => [name, hex, "Gloss", ""]);

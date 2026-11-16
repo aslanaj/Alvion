@@ -4,7 +4,7 @@
 .vehicle-row{display:grid;grid-template-columns:.8fr 1.2fr 1.2fr;gap:12px}
 .vehicle-row .field{min-width:0}.vehicle-row input{width:100%;min-width:0}
 .contact-form [hidden]{display:none!important}
-#home-quote-sheet{box-sizing:border-box;position:fixed;inset:auto 0 0;margin:0 auto;width:100%;max-width:600px;max-height:92vh;max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:#111719;color:#ecedea;border:1px solid #3b4346;border-bottom:0;border-radius:25px 25px 0 0;padding:12px 22px max(24px,env(safe-area-inset-bottom));box-shadow:0 -15px 60px #0005;font-family:inherit}
+#home-quote-sheet{box-sizing:border-box;position:fixed;inset:auto 0 0;margin:0 auto;width:100%;max-width:600px;max-height:92vh;max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:#0a172a;color:#ecedea;border:1px solid #3b4346;border-bottom:0;border-radius:25px 25px 0 0;padding:12px 22px max(24px,env(safe-area-inset-bottom));box-shadow:0 -15px 60px #0005;font-family:inherit}
 #home-quote-sheet:not([open]){display:none}
 #home-quote-sheet[open]{animation:quote-sheet-in .38s cubic-bezier(.2,.8,.2,1)}
 #home-quote-sheet::backdrop{background:rgba(0,0,0,.65)}
@@ -17,17 +17,17 @@
 #home-quote-sheet .sheet-form{display:grid;grid-template-columns:1fr;gap:15px;margin:0}
 #home-quote-sheet label,#home-quote-sheet legend{display:block;font-size:11px;letter-spacing:.09em;color:#aeb9bf;margin:0 0 7px}
 #home-quote-sheet .req{font-size:10px;letter-spacing:0}
-#home-quote-sheet input:not([type=radio]):not([type=checkbox]),#home-quote-sheet select,#home-quote-sheet textarea{font:inherit;font-size:16px;width:100%;min-width:0;min-height:44px;color:#f0f1ed;background:#1b2326;border:1px solid #394448;border-radius:9px;padding:10px 12px;color-scheme:dark}
+#home-quote-sheet input:not([type=radio]):not([type=checkbox]),#home-quote-sheet select,#home-quote-sheet textarea{font:inherit;font-size:16px;width:100%;min-width:0;min-height:44px;color:#f0f1ed;background:#102441;border:1px solid #394448;border-radius:9px;padding:10px 12px;color-scheme:dark}
 #home-quote-sheet input[type=hidden]{display:none!important}
 #home-quote-sheet textarea{min-height:65px;resize:vertical}
 #home-quote-sheet .reply-choice{border:0;margin:0;padding:0}
 #home-quote-sheet .reply-options{display:flex;gap:7px}
-#home-quote-sheet .reply-options label{flex:1;position:relative;text-align:center;background:#1b2326;border:1px solid #394448;border-radius:9px;padding:13px 4px;margin:0;font-size:14px;letter-spacing:0;cursor:pointer}
+#home-quote-sheet .reply-options label{flex:1;position:relative;text-align:center;background:#102441;border:1px solid #394448;border-radius:9px;padding:13px 4px;margin:0;font-size:14px;letter-spacing:0;cursor:pointer}
 #home-quote-sheet .reply-options input{position:absolute;opacity:0;width:1px;height:1px}
-#home-quote-sheet .reply-options label:has(:checked){background:#edf0e9;color:#151b1e;border-color:#edf0e9}
+#home-quote-sheet .reply-options label:has(:checked){background:#edf0e9;color:#0c1c32;border-color:#edf0e9}
 #home-quote-sheet .reply-options label:has(:focus-visible){outline:2px solid #a8dbe7;outline-offset:3px}
 #home-quote-sheet .vehicle-row{gap:8px}
-#home-quote-sheet .submit{width:100%;background:#edf0e9;color:#111719;border:0;border-radius:10px;padding:15px;font:inherit;font-size:16px;min-height:48px;cursor:pointer}
+#home-quote-sheet .submit{width:100%;background:#edf0e9;color:#0a172a;border:0;border-radius:10px;padding:15px;font:inherit;font-size:16px;min-height:48px;cursor:pointer}
 #home-quote-sheet .submit:disabled{opacity:.65;cursor:default}
 #home-quote-sheet .photo-note,.sheet-footnote{font-size:11px;line-height:1.5;color:#aeb7bc;margin:0}
 #home-quote-sheet a{color:inherit;text-decoration:underline}

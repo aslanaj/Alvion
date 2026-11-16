@@ -3,7 +3,7 @@
   const root = document.getElementById('alvion-car-preview');
   if (!root) return;
   let started = false;
-  const scripts = ['js/data/estimator-catalog.js?v=20261018-revision2', 'js/data/vehicle-images.js?v=20261018-revision2', 'js/features/estimator/controller.js?v=20261020-search1'];
+  const scripts = ['js/data/estimator-catalog.js?v=20261113-paint1', 'js/data/vinyl-films.js?v=20261018-revision2', 'js/data/ppf-colors.js?v=20261113-paint1', 'js/features/estimator/controller.js?v=20261115-fit1'];
   async function start() {
     if (started) return;
     started = true;

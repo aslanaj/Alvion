@@ -1,4 +1,4 @@
-#alvion-configurator .av-surface{margin-top:14px;background:#080a0d;color:#ebebea;border:1px solid #ffffff25;border-radius:24px;overflow:hidden;font-family:"Inter Tight",Arial,sans-serif;position:relative}
+#alvion-configurator .av-surface{margin-top:14px;background:#050a14;color:#ebebea;border:1px solid #ffffff25;border-radius:24px;overflow:hidden;font-family:"Inter Tight",Arial,sans-serif;position:relative}
 #alvion-configurator .av-surface *{box-sizing:border-box}
 #alvion-configurator .av-header{padding:24px 26px;border-bottom:1px solid #ffffff13;display:flex;justify-content:space-between;gap:16px;font:10px Michroma,monospace;letter-spacing:1.3px}
 #alvion-configurator .av-page{color:#9e9fa4;font-size:9px}
@@ -28,17 +28,17 @@
 #alvion-configurator .av-quote{border:1px solid #ffffff66;background:#ffffff12;backdrop-filter:blur(12px);color:#fff;min-height:46px;padding:10px 18px;border-radius:28px;font:12px "Inter Tight";cursor:pointer;white-space:nowrap}
 #alvion-configurator .av-quote span{margin-left:20px}
 #alvion-configurator .av-disclaimer{margin:0;padding:0 26px 22px;font:10px/1.6 "Inter Tight";color:#92969e}
-#alvion-configurator .av-inquiry{margin:0 26px 26px;padding:20px;border:1px solid #ffffff35;background:#15181d;border-radius:18px}
+#alvion-configurator .av-inquiry{margin:0 26px 26px;padding:20px;border:1px solid #ffffff35;background:#0c192f;border-radius:18px}
 #alvion-configurator .av-inquiry-top{display:flex;align-items:center;justify-content:space-between}
 #alvion-configurator .av-inquiry h3{font:500 20px "Inter Tight";margin:0 0 14px;color:#ebebea}
 #alvion-configurator .av-inquiry label{font:9px Michroma,monospace;color:#afb4bd}
-#alvion-configurator .av-inquiry textarea{display:block;width:100%;border:1px solid #ffffff30;border-radius:8px;background:#080a0d;color:#ebebea;padding:12px;margin-top:10px;font:14px/1.6 "Inter Tight";resize:vertical}
+#alvion-configurator .av-inquiry textarea{display:block;width:100%;border:1px solid #ffffff30;border-radius:8px;background:#050a14;color:#ebebea;padding:12px;margin-top:10px;font:14px/1.6 "Inter Tight";resize:vertical}
 #alvion-configurator .av-inquiry p{font:11px/1.6 "Inter Tight";color:#afb4bd}
 #alvion-configurator .av-close{min-width:44px;min-height:44px;background:none;border:0;color:#ebebea;font:25px "Inter Tight";cursor:pointer}
 #alvion-configurator [hidden]{display:none!important}
 #alvion-configurator .av-controls.av-focused{grid-template-columns:1fr;max-width:520px;margin:auto;border-top:0;padding-top:16px;width:100%}
 @media(max-width:560px){#alvion-configurator .av-header{padding:20px 18px;font-size:9px;letter-spacing:.7px}#alvion-configurator .av-heading{padding:24px 18px 0}#alvion-configurator .av-heading h2{font-size:30px}#alvion-configurator .av-controls{grid-template-columns:1fr;gap:22px;padding:20px 18px}#alvion-configurator .av-footer{padding:20px 18px;gap:12px}#alvion-configurator .av-summary{font-size:11px}#alvion-configurator .av-quote{padding:10px 13px}#alvion-configurator .av-quote span{margin-left:10px}#alvion-configurator .av-disclaimer{padding:0 18px 20px}#alvion-configurator .av-swatches button{width:38px}#alvion-configurator .av-inquiry{margin:0 18px 20px}}
 
-#alvion-configurator{max-width:1100px;margin:55px auto;padding:0 20px}#alvion-configurator>.nav{display:none}#alvion-configurator .av-surface{background:rgba(17,20,25,.35)}
+#alvion-configurator{max-width:1100px;margin:55px auto;padding:0 20px}#alvion-configurator>.nav{display:none}#alvion-configurator .av-surface{background:rgba(10,21,39,.35)}
 
-#alvion-configurator .av-real-car{max-height:360px;margin:18px 0 10px}#alvion-configurator .av-vehicle{background:#080a0d;border-radius:18px;overflow:hidden}
+#alvion-configurator .av-real-car{max-height:360px;margin:18px 0 10px}#alvion-configurator .av-vehicle{background:#050a14;border-radius:18px;overflow:hidden}
